@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.57.0'
+project:
+    name: UATEnvironment
+    package:
+        name: UATEnvironment
+        api_version: '54.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/UATEnvironment/tests
+            options:
+                outputdir: robot/UATEnvironment/results
+
+    robot_testdoc:
+        options:
+            path: robot/UATEnvironment/tests
+            output: robot/UATEnvironment/doc/UATEnvironment_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
